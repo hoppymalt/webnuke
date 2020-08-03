@@ -35,6 +35,7 @@ class WebDriverUtil:
 		chrome_options = webdriver.ChromeOptions()
 		chrome_options.add_argument("--proxy-server=%s"%("http://"+proxy_host+":"+str(proxy_port)))
 		chrome_options.add_argument("--ignore-certificate-errors")
+		chrome_options.add_argument("--no-sandbox")
 		driver = Chrome(chrome_options=chrome_options)
 		return driver
 		
@@ -46,6 +47,7 @@ class WebDriverUtil:
 		
 		chrome_options = webdriver.ChromeOptions()
 		chrome_options.add_argument("--ignore-certificate-errors")
+		chrome_options.add_argument("--no-sandbox")
 		driver = Chrome(chrome_options=chrome_options)
 		return driver
 		
